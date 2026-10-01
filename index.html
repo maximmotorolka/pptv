@@ -102,6 +102,7 @@ footer{color:var(--mut);text-align:center;font-size:12px;margin-top:40px}
       <button class="navbtn on" data-tab="tv">ТВ-каналы</button>
       <button class="navbtn" data-tab="movies">Кино</button>
       <button class="navbtn" data-tab="series">Сериалы</button>
+      <button class="navbtn" data-tab="forum">Форум</button>
     </nav>
     <button class="adm-btn" id="adm-open" title="Админка">⚙</button>
   </div>
@@ -119,6 +120,26 @@ footer{color:var(--mut);text-align:center;font-size:12px;margin-top:40px}
   <section id="v-series" hidden>
     <div class="sect"><h2>Сериалы</h2><span>новые сезоны</span></div>
     <div class="grid" id="se-grid"></div>
+  </section>
+  <section id="v-forum" hidden>
+    <div class="sect"><h2>Форум</h2><span>обсуждение каналов, кино и новинок</span></div>
+    <div class="f-card">
+      <div class="f-new">
+        <input id="f-name" maxlength="20" placeholder="Ваше имя (для комментариев)">
+        <input id="f-ttitle" maxlength="80" placeholder="Тема нового обсуждения…">
+        <button class="btn" id="f-newbtn">+ Создать тему</button>
+      </div>
+      <div id="f-threads"></div>
+    </div>
+    <div id="f-thread" class="f-card" hidden>
+      <button class="btn ghost" id="f-back" style="margin-bottom:10px">← Все темы</button>
+      <h3 id="f-tname" style="margin-bottom:12px"></h3>
+      <div id="f-posts"></div>
+      <div class="f-reply">
+        <textarea id="f-rtxt" rows="2" maxlength="400" placeholder="Ваш ответ…"></textarea>
+        <button class="btn" id="f-rbtn">Ответить</button>
+      </div>
+    </div>
   </section>
   <footer id="foot"></footer>
 </div>
